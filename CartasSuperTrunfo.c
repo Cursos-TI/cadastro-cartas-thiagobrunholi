@@ -68,8 +68,8 @@ int main() {
   densidade2 = (float)populacao2 / area2;
 
   // Cálculo do PIB per capita
-  percapita1 = (float)pib1 / populacao1;
-  percapita2 = (float)pib2 / populacao2;
+  percapita1 = (float)(pib1 * 1000000000) / populacao1;
+  percapita2 = (float)(pib2 * 1000000000) / populacao2;
 
   // Área para exibição dos dados da cidade
   printf("\nCarta 1:\n");
@@ -80,7 +80,7 @@ int main() {
   printf("Área: %.2f Km²\n", area1);
   printf("PIB: %.2f bilhões de reais\n", pib1);
   printf("Número de Pontos Turísticos: %d\n", pontos1);
-  printf("Densidade Populacional: %.2f habitantes por Km²\n", densidade1);
+  printf("Densidade Populacional: %.2f hab/Km²\n", densidade1);
   printf("PIB per capita: %.2f reais\n", percapita1);
 
   printf("\nCarta 2:\n");
@@ -91,8 +91,8 @@ int main() {
   printf("Área: %.2f Km²\n", area2);
   printf("PIB: %.2f bilhões de reais\n", pib2);
   printf("Número de Pontos Turísticos: %d\n", pontos2);
-  printf("Densidade Populacional: %.2f habitantes por Km²\n", densidade2);
-  printf("PIB per capita: %.2f reais\n", percapita1);
+  printf("Densidade Populacional: %.2f hab/Km²\n", densidade2);
+  printf("PIB per capita: %.2f reais\n", percapita2);
 
 return 0;
 } 
