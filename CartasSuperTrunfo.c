@@ -15,6 +15,7 @@ int main() {
   int pontos1, pontos2;
   float densidade1, densidade2;
   float percapita1, percapita2;
+  float superPoder1, superPoder2;
 
   // Área para entrada de dados
   printf("Inserindo dados Carta 1\n");
@@ -71,6 +72,10 @@ int main() {
   percapita1 = (float)(pib1 * 1000000000) / populacao1;
   percapita2 = (float)(pib2 * 1000000000) / populacao2;
 
+  // Calculando o Super Poder
+  superPoder1 = (float)populacao1 + area1 + pib1 + pontos1 + percapita1 + (1.0f / densidade1);
+  superPoder2 = (float)populacao2 + area2 + pib2 + pontos2 + percapita2 + (1.0f / densidade2);
+
   // Área para exibição dos dados da cidade
   printf("\nCarta 1:\n");
   printf("Estado: %c\n", estado1);
@@ -82,6 +87,7 @@ int main() {
   printf("Número de Pontos Turísticos: %d\n", pontos1);
   printf("Densidade Populacional: %.2f hab/Km²\n", densidade1);
   printf("PIB per capita: %.2f reais\n", percapita1);
+  printf("SuperPoder: %2.f\n", superPoder1);
 
   printf("\nCarta 2:\n");
   printf("Estado: %c\n", estado2);
@@ -93,6 +99,10 @@ int main() {
   printf("Número de Pontos Turísticos: %d\n", pontos2);
   printf("Densidade Populacional: %.2f hab/Km²\n", densidade2);
   printf("PIB per capita: %.2f reais\n", percapita2);
+  printf("SuperPoder: %2.f\n", superPoder2);
+
+  // Comparando os valores das cartas
+  
 
 return 0;
 } 
